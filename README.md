@@ -1,5 +1,5 @@
 Olá! Este é um projeto baseado no mundo fictício de Naruto, onde os personagens são ninjas e são organizados em missões de acordo com suas capacidades.
-O objetivo deste projeto é organizar os personagens através de um id, organizando suas particularidades.
+O objetivo deste projeto é organizar os personagens através de um id, mapeando suas particularidades.
 
 Para isso, foi usado a IDE Eclipse, importando uma estrutura gerada através do SpringBoot sob configuração Project Maven, Linguagem Java versão 21, Springboot 3.3.8, Packaging Jar.
 
