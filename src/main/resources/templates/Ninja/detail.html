@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalhes do Ninja</title>
+</head>
+<body>
+    <h1>Detalhes de <span th:text="${ninja.nome}"></span></h1>
+
+    <p><strong>Clan:</strong> <span th:text="${ninja.cla}"></span></p>
+    <p><strong>Kekkei Genkai:</strong> <span th:text="${ninja.kekkeiGenkai}"></span></p>
+    <p><strong>Vila:</strong> <span th:text="${ninja.vila}"></span></p>
+
+    <br>
+    <a href="/ninjas">Voltar para a lista de ninjas</a>
+</body>
+</html>

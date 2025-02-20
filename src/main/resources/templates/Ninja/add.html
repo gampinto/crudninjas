@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adicionar Ninja</title>
+</head>
+<body>
+    <h1>Adicionar Ninja</h1>
+
+    <form action="/ninjas/save" method="post">
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="nome" required><br><br>
+
+        <label for="cla">Clan:</label>
+        <input type="text" id="cla" name="cla" required><br><br>
+
+        <label for="kekkeiGenkai">Kekkei Genkai:</label>
+        <input type="text" id="kekkeiGenkai" name="kekkeiGenkai" required><br><br>
+
+        <label for="vila">Vila:</label>
+        <input type="text" id="vila" name="vila" required><br><br>
+
+        <button type="submit">Salvar</button>
+    </form>
+
+    <br>
+    <a href="/ninjas">Voltar para a lista de ninjas</a>
+</body>
+</html>

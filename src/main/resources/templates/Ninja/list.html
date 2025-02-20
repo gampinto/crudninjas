@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Ninjas</title>
+</head>
+<body>
+    <h1>Lista de Ninjas</h1>
+    
+    <a href="/ninjas/add">Adicionar Novo Ninja</a>
+
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Clan</th>
+                <th>Kekkei Genkai</th>
+                <th>Vila</th>
+                <th>Ações</th>
+            </tr>
+        </thead>
+        <tbody>
+            <th:block th:each="ninja : ${ninjas}">
+                <tr>
+                    <td th:text="${ninja.nome}"></td>
+                    <td th:text="${ninja.cla}"></td>
+                    <td th:text="${ninja.kekkeiGenkai}"></td>
+                    <td th:text="${ninja.vila}"></td>
+                    <td>
+                        <a th:href="@{/ninjas/{id}(id=${ninja.id})}">Ver Detalhes</a>
+                        <a th:href="@{/ninjas/delete/{id}(id=${ninja.id})}" onclick="return confirm('Tem certeza que deseja excluir?')">Excluir</a>
+                    </td>
+                </tr>
+            </th:block>
+        </tbody>
+    </table>
+</body>
+</html>

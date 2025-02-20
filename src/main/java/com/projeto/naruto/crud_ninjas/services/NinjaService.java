@@ -1,7 +1,7 @@
 package com.projeto.naruto.crud_ninjas.services;
 
 import com.projeto.naruto.crud_ninjas.entities.Ninja;
-import com.projeto.naruto.crud_ninjas.repositories.NinjaRepository;  
+import com.projeto.naruto.crud_ninjas.repositories.NinjaRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -14,25 +14,19 @@ public class NinjaService {
     @Autowired
     private NinjaRepository ninjaRepository;
 
-    public List<Ninja> getAllNinjas() {
+    public List<Ninja> findAll() {
         return ninjaRepository.findAll();
     }
 
-    public Ninja getNinjaById(Long id) {
-        Optional<Ninja> ninja = ninjaRepository.findById(id);
-        return ninja.orElse(null);
+    public Optional<Ninja> findById(Long id) {
+        return ninjaRepository.findById(id);
     }
 
-    public Ninja createNinja(Ninja ninja) {
+    public Ninja save(Ninja ninja) {
         return ninjaRepository.save(ninja);
     }
 
-    public Ninja updateNinja(Long id, Ninja ninja) {
-     ninja.setId(id);
-        return ninjaRepository.save(ninja);
-    }
-
-    public void deleteNinja(Long id) {
+    public void deleteById(Long id) {
         ninjaRepository.deleteById(id);
     }
 }
